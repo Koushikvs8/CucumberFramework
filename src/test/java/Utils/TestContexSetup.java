@@ -1,5 +1,7 @@
 package Utils;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 
 import PageObjects.PageObjectManager;
@@ -12,7 +14,7 @@ public class TestContexSetup {
 	public PageObjectManager pageObjmaneger;
 	public TestBase testBase;
 	
-	public TestContexSetup() {
+	public TestContexSetup() throws IOException {
 		testBase = new TestBase();
 		pageObjmaneger=new PageObjectManager(testBase.webDriverManeger());
 	}
