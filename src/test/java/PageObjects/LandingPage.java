@@ -46,4 +46,16 @@ public String getTitleLandingPage()
 {
 	return driver.getTitle();
 }
+public void incrementQuantity(int quantity)
+{
+	int i = quantity-1;
+	while(i>0)
+	{
+		driver.findElement(increment).click();
+		i--;
+	}
+	
+}
+
+
 }

@@ -19,7 +19,7 @@ public class OfferPageStepDefination {
 	
 	
 	
-	@Then("user searched for {string} shortname in offers page")
+	@Then("^user searched for (.+) shortname in offers page$")
 	public void user_searched_for_shortname_in_offers_page(String shortname) throws InterruptedException {
 		
 		LandingPage lp =testSetup.pageObjmaneger.getLandingPage();

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-17T14:33:42 IST" name="Default suite" finished-at="2024-11-17T14:33:57 IST" duration-ms="14888">
+  <suite started-at="2024-11-18T19:37:28 IST" name="Default suite" finished-at="2024-11-18T19:37:40 IST" duration-ms="12046">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberOptions.TestNGRunner@4d5650ae]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberOptions.FailedTestRunner$TestNGRunner@15bb5034]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-11-17T14:33:42 IST" name="Default test" finished-at="2024-11-17T14:33:57 IST" duration-ms="14888">
-      <class name="CucumberOptions.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:CucumberOptions.TestNGRunner@4d5650ae]" started-at="2024-11-17T14:33:42 IST" name="setUpClass" finished-at="2024-11-17T14:33:43 IST" duration-ms="604" status="PASS">
+    <test started-at="2024-11-18T19:37:28 IST" name="Default test" finished-at="2024-11-18T19:37:40 IST" duration-ms="12046">
+      <class name="CucumberOptions.FailedTestRunner$TestNGRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:CucumberOptions.FailedTestRunner$TestNGRunner@15bb5034]" started-at="2024-11-18T19:37:28 IST" name="setUpClass" finished-at="2024-11-18T19:37:29 IST" duration-ms="922" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@34acbc60]]>
+                <![CDATA[org.testng.TestRunner@b25b095]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberOptions.TestNGRunner@4d5650ae]" started-at="2024-11-17T14:33:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-17T14:33:57 IST" duration-ms="14151" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:CucumberOptions.FailedTestRunner$TestNGRunner@15bb5034]" started-at="2024-11-18T19:37:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-11-18T19:37:39 IST" duration-ms="10573" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,14 +34,31 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Beetroot] but found [No data]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Beetroot] but found [No data]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at StepDefinations.OfferPageStepDefination.validate_product_name_in_offers_page_matches_with_landing_page(OfferPageStepDefination.java:40)
+at ✽.validate product name in offers page matches with Landing Page(file:///C:/Users/User/eclipse-workspace/SeleniumFRAmwork/CucumberFramwork/src/test/java/features/searchProduct.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:CucumberOptions.TestNGRunner@4d5650ae]" started-at="2024-11-17T14:33:57 IST" name="tearDownClass" finished-at="2024-11-17T14:33:57 IST" duration-ms="95" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:CucumberOptions.FailedTestRunner$TestNGRunner@15bb5034]" started-at="2024-11-18T19:37:39 IST" name="tearDownClass" finished-at="2024-11-18T19:37:40 IST" duration-ms="497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- CucumberOptions.TestNGRunner -->
+      </class> <!-- CucumberOptions.FailedTestRunner$TestNGRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
