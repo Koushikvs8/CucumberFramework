@@ -2,6 +2,7 @@ package Utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -20,23 +21,35 @@ public WebDriver webDriverManeger() throws IOException
 	prop.load(file);
 	
 	String url=prop.getProperty("QAUrl");
-	String Browser=prop.getProperty("browser");
+	String browser_prop=prop.getProperty("browser");
+	String browser_maven=System.getProperty("browser");
+	String browserMain;
+	////////maven_comandline _ run///
+	if(browser_maven!=null)
+	{
+		browserMain=browser_maven;
+	}
+	else
+	{
+		browserMain=browser_prop;
+	}
 	if(driver ==null)
-{  if(Browser.equalsIgnoreCase("chrome"))
+{  if(browserMain.equalsIgnoreCase("chrome"))
 {
 	driver=new ChromeDriver();
 	
 	
 }
-if(Browser.equalsIgnoreCase("ff")){
+if(browserMain.equalsIgnoreCase("ff")){
 	driver=new FirefoxDriver();
 	
 }
-if(Browser.equalsIgnoreCase("Edge")){
+if(browserMain.equalsIgnoreCase("Edge")){
 	driver=new EdgeDriver();
 	
 }
 driver.get(url);
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 }
 	return driver;
 }
